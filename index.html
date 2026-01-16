@@ -1,0 +1,322 @@
+[file name]: index.html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чебуреки от Vovanhick</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-drumstick-bite"></i> Чебуреки от Vovanhick</h1>
+                <p class="tagline">Вкус, который объединяет поколения</p>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><button class="nav-btn active" data-tab="home">Главная</button></li>
+                    <li><button class="nav-btn" data-tab="recipes">Рецепты</button></li>
+                    <li><button class="nav-btn" data-tab="history">История</button></li>
+                    <li><button class="nav-btn" data-tab="gallery">Галерея</button></li>
+                    <li><button class="nav-btn" data-tab="tips">Советы</button></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main container">
+        <!-- Главная -->
+        <section id="home" class="tab-content active">
+            <div class="hero">
+                <div class="hero-text">
+                    <h2>Идеальный чебурек — это искусство</h2>
+                    <p>Хрустящее тесто, сочная начинка и неповторимый аромат. На этом сайте вы найдете лучшие рецепты, проверенные временем и тысячами хозяек.</p>
+                    <button class="cta-btn" data-tab="recipes">Смотреть рецепты</button>
+                </div>
+                <div class="hero-image">
+                    <!-- Изображение в той же папке -->
+                    <img src="hero.jpg" alt="Вкусные чебуреки">
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Быстро</h3>
+                    <p>Приготовление от теста до подачи — 1 час</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Вкусно</h3>
+                    <p>Проверенные рецепты с идеальным балансом</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Разнообразно</h3>
+                    <p>Классические и современные варианты</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Рецепты -->
+        <section id="recipes" class="tab-content">
+            <h2 class="section-title">Лучшие рецепты</h2>
+            <p class="section-subtitle">Выберите рецепт и порадуйте близких</p>
+
+            <div class="recipes-container">
+                <!-- Рецепт 1: Классический -->
+                <article class="recipe-card" id="classic">
+                    <div class="recipe-header">
+                        <h3><i class="fas fa-crown"></i> Классические чебуреки</h3>
+                        <span class="badge popular">Самый популярный</span>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="recipe-image">
+                            <img src="classic1.jpg" alt="Классические чебуреки">
+                        </div>
+                        <div class="recipe-details">
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 60 мин</span>
+                                <span><i class="fas fa-user-friends"></i> 4 порции</span>
+                                <span><i class="fas fa-fire"></i> Средняя сложность</span>
+                            </div>
+                            <h4>Ингредиенты:</h4>
+                            <ul>
+                                <li>Мука — 500 г</li>
+                                <li>Вода — 250 мл</li>
+                                <li>Яйцо — 1 шт</li>
+                                <li>Фарш говяжий — 500 г</li>
+                                <li>Лук репчатый — 2 шт</li>
+                                <li>Соль, перец, зелень — по вкусу</li>
+                                <li>Масло для жарки — 300 мл</li>
+                            </ul>
+                            <h4>Приготовление:</h4>
+                            <ol>
+                                <li>Замесить тесто из муки, воды, яйца и щепотки соли. Дать отдохнуть 30 мин.</li>
+                                <li>Для начинки смешать фарш с мелко нарезанным луком, добавить специи.</li>
+                                <li>Раскатать тесто, вырезать кружки. На каждый положить начинку, защипать края.</li>
+                                <li>Жарить в большом количестве масла до золотистой корочки.</li>
+                                <li>Выложить на бумажные полотенца, чтобы убрать лишний жир.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Рецепт 2: С сыром -->
+                <article class="recipe-card" id="cheese">
+                    <div class="recipe-header">
+                        <h3><i class="fas fa-cheese"></i> Чебуреки с сыром и зеленью</h3>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="recipe-image">
+                            <img src="cheese1.jpg" alt="Чебуреки с сыром">
+                        </div>
+                        <div class="recipe-details">
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 45 мин</span>
+                                <span><i class="fas fa-user-friends"></i> 3 порции</span>
+                                <span><i class="fas fa-fire"></i> Легко</span>
+                            </div>
+                            <h4>Ингредиенты:</h4>
+                            <ul>
+                                <li>Готовое слоеное тесто — 500 г</li>
+                                <li>Сыр сулугуни — 300 г</li>
+                                <li>Творог — 200 г</li>
+                                <li>Укроп, петрушка — пучок</li>
+                                <li>Чеснок — 2 зубчика</li>
+                                <li>Сметана для подачи</li>
+                            </ul>
+                            <h4>Приготовление:</h4>
+                            <ol>
+                                <li>Сыр натереть, смешать с творогом, мелко нарубленной зеленью и чесноком.</li>
+                                <li>Тесто раскатать, нарезать на квадраты.</li>
+                                <li>Выложить начинку, сложить пополам, плотно защипать края.</li>
+                                <li>Обжарить с двух сторон на сковороде с небольшим количеством масла.</li>
+                                <li>Подавать со сметаной.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Рецепт 3: Веганские -->
+                <article class="recipe-card" id="vegan">
+                    <div class="recipe-header">
+                        <h3><i class="fas fa-leaf"></i> Веганские чебуреки с грибами</h3>
+                        <span class="badge vegan">Веган</span>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="recipe-image">
+                            <img src="vegan1.jpg" alt="Веганские чебуреки">
+                        </div>
+                        <div class="recipe-details">
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 50 мин</span>
+                                <span><i class="fas fa-user-friends"></i> 4 порции</span>
+                                <span><i class="fas fa-fire"></i> Средняя сложность</span>
+                            </div>
+                            <h4>Ингредиенты:</h4>
+                            <ul>
+                                <li>Мука — 400 г</li>
+                                <li>Вода газированная — 200 мл</li>
+                                <li>Шампиньоны — 400 г</li>
+                                <li>Лук — 2 шт</li>
+                                <li>Морковь — 1 шт</li>
+                                <li>Соевый соус — 2 ст.л.</li>
+                                <li>Растительное масло — для жарки</li>
+                            </ul>
+                            <h4>Приготовление:</h4>
+                            <ol>
+                                <li>Замесить тесто на газированной воде, дать отдохнуть.</li>
+                                <li>Грибы и овощи мелко нарезать, обжарить до готовности.</li>
+                                <li>Добавить соевый соус, потушить еще 5 минут.</li>
+                                <li>Тесто раскатать, начинить овощной смесью.</li>
+                                <li>Жарить на растительном масле до хрустящей корочки.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- История -->
+        <section id="history" class="tab-content">
+            <h2 class="section-title">История чебуреков</h2>
+            <div class="history-content">
+                <div class="history-text">
+                    <h3>От кочевников до наших столов</h3>
+                    <p>Чебуреки — это не просто жареные пирожки, это история целых народов. Их корни уходят к тюркским кочевым племенам, которым нужна была сытная, долго хранящаяся и простая в приготовлении еда.</p>
+                    
+                    <p>Название происходит от тюркского слова «çiğ börek», что означает «сырой пирог» — отсылка к сырой начинке, которую кладут перед жаркой. Интересно, что у каждого народа есть свой вариант: в Крыму — чебуреки, в Турции — «чиг борек», в Средней Азии — «самса».</p>
+                    
+                    <div class="history-fact">
+                        <i class="fas fa-lightbulb"></i>
+                        <p><strong>Интересный факт:</strong> Идеальный чебурек должен быть таким сочным, чтобы при надкусывании из него вытекал сок. Это называется «слеза чебурека».</p>
+                    </div>
+
+                    <p>В СССР чебуреки стали культовой уличной едой, особенно популярной в причерноморских городах. Сегодня это блюдо объединяет традиции Востока и Запада, оставаясь любимым лакомством миллионов.</p>
+                </div>
+                <div class="history-image">
+                    <img src="history.jpg" alt="История чебуреков">
+                </div>
+            </div>
+        </section>
+
+        <!-- Галерея -->
+        <section id="gallery" class="tab-content">
+            <h2 class="section-title">Галерея</h2>
+            <p class="section-subtitle">Вкус, который видно</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="classic2.jpg" alt="Чебуреки с мясом">
+                    <div class="gallery-caption">Классические с мясом</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="cheese1.jpg" alt="С сыром">
+                    <div class="gallery-caption">С сыром сулугуни</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="vegan1.jpg" alt="Веганские">
+                    <div class="gallery-caption">Веганские с грибами</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="hero.jpg" alt="Подача">
+                    <div class="gallery-caption">Идеальная подача</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Советы -->
+        <section id="tips" class="tab-content">
+            <h2 class="section-title">Секреты идеальных чебуреков</h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-temperature-high"></i>
+                    </div>
+                    <h3>Температура масла</h3>
+                    <p>Масло должно быть хорошо разогрето (180°C). Капните каплю воды — если шипит, можно жарить.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Тесто отдыхает</h3>
+                    <p>После замеса обязательно дайте тесту отдохнуть 30-40 минут под полотенцем — оно станет эластичнее.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-weight-hanging"></i>
+                    </div>
+                    <h3>Тонко раскатывайте</h3>
+                    <p>Чем тоньше раскатано тесто, тем хрустяще получится чебурек. Оптимально 2-3 мм.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <h3>Убираем лишний жир</h3>
+                    <p>После жарки выкладывайте чебуреки на бумажные полотенца — они впитают излишки масла.</p>
+                </div>
+            </div>
+            
+            <div class="warning-tip">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p><strong>Важно:</strong> Не делайте начинку слишком влажной, иначе тесто размокнет и будет рваться при жарке.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3><i class="fas fa-drumstick-bite"></i> Чебуреки от Vovanhick</h3>
+                    <p>© 2026. Все рецепты проверены временем.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><button class="footer-link" data-tab="home">Главная</button></li>
+                        <li><button class="footer-link" data-tab="recipes">Рецепты</button></li>
+                        <li><button class="footer-link" data-tab="history">История</button></li>
+                        <li><button class="footer-link" data-tab="gallery">Галерея</button></li>
+                        <li><button class="footer-link" data-tab="tips">Советы</button></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Поделиться</h4>
+                    <p class="share-text">Будем рады, если вы поделитесь сайтом с друзьями</p>
+                    <div class="social-icons">
+                        <span class="social-hint">Например:</span>
+                        <div class="social-examples">
+                            <span class="social-example">ВКонтакте</span>
+                            <span class="social-example">Telegram</span>
+                            <span class="social-example">WhatsApp</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Сайт создан с любовью к кулинарии | © 2026 Чебуреки от Vovanhick</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
